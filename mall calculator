@@ -19,21 +19,21 @@ while True:
     
     if choice.upper( )== "Q":
        break 
-
- print("---------------------------------------------\n")
+ 
+print("---------------------------------------------\n") 
 print("Food/Product you order:\n ")   
-    
+ 
 for productName in products:
       print(productName)
 
 for i in range(len(prices)):
-      total_amount += prices[i] *    quantities[i] 
+      total_amount += prices[i] * quantities[i] 
       
 
 
 print("---------------------------------------------\n")
     
-amount = float(input("\nEnter Amount: "))
+amount = float(input("\n\nEnter Amount: "))
 
 print(f"Total: {total_amount:.2f}")
 
@@ -61,9 +61,16 @@ if (amount >= total_amount) :
 
     for i in range(len(products)):
       print(f" {products[i] :<15} | {quantities[i]:^10} | {prices[i]:>8.2f}")
+      
+    print("---------------------------------------------\n\n")
+
+    print("^_^ Comeback Again\n\n")
+
+    print("---------------------------------------------\n\n")
+    
 
 else:
-    print("Insufficient Money")
+    print("Insufficient Money\n")
     
     print("---------------------------------------------\n\n")
 
