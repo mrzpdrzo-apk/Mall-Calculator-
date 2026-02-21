@@ -20,6 +20,8 @@ while True:
     if choice.upper( )== "Q":
        break 
 
+ print("---------------------------------------------\n")
+print("Food/Product you order:\n ")   
     
 for productName in products:
       print(productName)
@@ -31,7 +33,7 @@ for i in range(len(prices)):
 
 print("---------------------------------------------\n")
     
-amount = float(input("\n\nEnter Amount: "))
+amount = float(input("\nEnter Amount: "))
 
 print(f"Total: {total_amount:.2f}")
 
