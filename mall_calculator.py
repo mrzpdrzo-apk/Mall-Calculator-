@@ -4,12 +4,25 @@ quantities = []
 total_amount  = 0
 changes = 0
 
-print("^_^------------Mall Caculator---------^_^\n\n\n")
+print("^_^------------Mall Calculator---------^_^\n\n\n")
     
 while True:    
     product = input("Enter Product: ")
-    price = float(input("Enter Price: "))
-    quantity = int(input("Enter Quantity: "))
+    try:
+        price = float(input("Enter Price: "))
+        quantity = int(input("Enter Quantity: "))
+    except ValueError:
+        print("Invalid input. Price must be a number and quantity must be a whole number.\n")
+        continue
+
+    if price < 0:
+        print("Price cannot be negative.\n")
+        continue
+
+    if quantity < 0:
+        print("Quantity cannot be negative.\n")
+        continue
+
     choice = input("\nWould you like to add  another product? Type Y for yes Q to quit: ")
     print()
     
@@ -45,7 +58,7 @@ if (amount >= total_amount) :
     
     
     print("---------------------------------------------\n")
-    print("Reciept\n")
+    print("Receipt\n")
     print("---------------------------------------------\n")
 
     print(f"Total: {total_amount:.2f}")
